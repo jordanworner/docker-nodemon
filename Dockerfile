@@ -8,7 +8,7 @@ RUN npm install -g gulp-cli@~1.2.0
 VOLUME /usr/src/app
 WORKDIR /usr/src/app
 
-RUN npm config set prefix /root/node
+COPY .npmrc /root/.npmrc
 VOLUME /root/node/lib/node_modules
 
 EXPOSE 3000
